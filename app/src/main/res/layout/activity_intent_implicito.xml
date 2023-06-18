@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Ejercicio1.IntentImplicitoActivity">
 
+    <!--
     <Button
         android:id="@+id/btnSend"
         android:layout_width="100dp"
@@ -27,6 +28,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="30dp"
         android:text="Url"
+        />
+        -->
+
+    <TextView
+        android:id="@+id/tvImpIntentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intent Implícito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btnUrl"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/tvImpIntentTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="#FF5733"
+        android:text="Url"
+        />
+
+    <Button
+        android:id="@+id/btnFirstActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnUrl"
+        android:layout_marginTop="30dp"
+        android:text="FirstActivity"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

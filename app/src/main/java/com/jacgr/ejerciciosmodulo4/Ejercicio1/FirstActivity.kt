@@ -16,7 +16,11 @@ class FirstActivity : AppCompatActivity() {
                 "resultCode = ${result.resultCode} EXTRA_IS_OK = ${result.data?.getBooleanExtra("EXTRA_IS_OK", false)}",
                 Toast.LENGTH_LONG).show()*/
             Toast.makeText(this,
-                "NAME = ${result.data?.getStringExtra("EXTRA_NAME")} LASTNAME = ${result.data?.getStringExtra("EXTRA_LASTNAME")} AGE = ${result.data?.getIntExtra("EXTRA_AGE",0)}",
+                "NAME = ${result.data?.getStringExtra("EXTRA_NAME")} " +
+                        "LASTNAME = ${result.data?.getStringExtra("EXTRA_LASTNAME")} " +
+                        "AGE = ${result.data?.getIntExtra("EXTRA_AGE",0)} " +
+                        "WEIGHT = ${result.data?.getDoubleExtra("EXTRA_WEIGHT",0.0)} " +
+                        "MARRIED = ${result.data?.getBooleanExtra("EXTRA_MARRIED",false)}",
                 Toast.LENGTH_LONG).show()
         }else{
             Toast.makeText(this, "resultCode = ${result.resultCode} - CANCELLED", Toast.LENGTH_LONG).show()
@@ -31,9 +35,11 @@ class FirstActivity : AppCompatActivity() {
 
         btnCall.setOnClickListener {
             val secondIntent = Intent(this, SecondActivity::class.java).apply {
-                putExtra("EXTRA_NAME", "Juan Andres")
+                putExtra("EXTRA_NAME", "Juan Andrés")
                 putExtra("EXTRA_LASTNAME", "Cervantes Guati Rojo")
-                putExtra("EXTRA_AGE", 33)
+                putExtra("EXTRA_AGE", 23)
+                putExtra("EXTRA_WEIGHT", 75.0)
+                putExtra("EXTRA_MARRIED", true)
             }
             //startActivity(secondIntent)
             register.launch(secondIntent)

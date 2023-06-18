@@ -19,7 +19,7 @@
             android:name=".Ejercicio1.IntentImplicitoActivity"
             android:exported="false" />
         <activity
-            android:name=".Ejercicio1.FirstActivity"
+            android:name=".Ejercicio1.CicloVidaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Ejercicio1.CicloVidaActivity"
+            android:name=".Ejercicio1.FirstActivity"
             android:exported="true" />
     </application>
 

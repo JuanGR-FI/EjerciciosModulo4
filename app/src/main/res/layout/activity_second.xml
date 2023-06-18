@@ -13,8 +13,9 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
         android:background="@android:color/holo_orange_dark"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@android:color/black"
         android:text="Name"
+        android:textSize="20sp"
         />
 
     <TextView
@@ -24,8 +25,9 @@
         app:layout_constraintTop_toBottomOf="@id/tvName"
         android:layout_marginTop="20dp"
         android:background="@android:color/holo_orange_dark"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@android:color/black"
         android:text="Apellido"
+        android:textSize="20sp"
         />
 
     <TextView
@@ -35,15 +37,39 @@
         app:layout_constraintTop_toBottomOf="@id/tvLastName"
         android:layout_marginTop="20dp"
         android:background="@android:color/holo_orange_dark"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@android:color/black"
         android:text="Edad"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvAge"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/black"
+        android:text="Peso"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/tvMarried"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvWeight"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/black"
+        android:text="Casado"
+        android:textSize="20sp"
         />
 
     <Button
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvAge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
