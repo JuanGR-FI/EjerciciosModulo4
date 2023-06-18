@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvCicloTitle"
-        android:text="Activity Intent Implicito"
+        android:text="Open Implicit Intent Activity"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

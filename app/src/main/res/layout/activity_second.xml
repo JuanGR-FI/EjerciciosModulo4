@@ -7,10 +7,23 @@
     tools:context=".Ejercicio1.SecondActivity">
 
     <TextView
+        android:id="@+id/tvSecondActivityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second Activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSecondActivityTitle"
         android:layout_marginTop="20dp"
         android:background="@android:color/holo_orange_dark"
         android:textColor="@android:color/black"
@@ -74,7 +87,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="40dp"
-        android:text="Regresar Info"
+        android:text="Return Info"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
