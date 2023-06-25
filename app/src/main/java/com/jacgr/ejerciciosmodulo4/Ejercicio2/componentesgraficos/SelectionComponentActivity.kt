@@ -1,5 +1,6 @@
 package com.jacgr.ejerciciosmodulo4.Ejercicio2.componentesgraficos
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,10 +14,11 @@ class SelectionComponentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_selection_component)
 
         val cbCreditCard = findViewById<CheckBox>(R.id.cbCreditCard)
-        val btnSend = findViewById<Button>(R.id.btnSend)
+        val btnSend = findViewById<ImageButton>(R.id.btnSend)
         val rgSex = findViewById<RadioGroup>(R.id.rgSex)
+        val btnRecycler = findViewById<Button>(R.id.btnRecyclerView)
 
-        cbCreditCard.setOnCheckedChangeListener { _, isChecked ->
+        /*cbCreditCard.setOnCheckedChangeListener { _, isChecked ->
             Toast.makeText(this, "isChecked = $isChecked", Toast.LENGTH_SHORT).show()
         }
 
@@ -27,19 +29,19 @@ class SelectionComponentActivity : AppCompatActivity() {
                 else -> "Desconocido"
             }
             Toast.makeText(this, "isCheckedId = $idName", Toast.LENGTH_SHORT).show()
-        }
+        }*/
 
         // SPINNER
 
         val spinner = findViewById<Spinner>(R.id.spinner)
-        val datos = arrayListOf("México", "España", "Dinamarca", "Estados Unidos", "Venezuela", "Colombia")
+        val datos = arrayListOf("México", "España", "Dinamarca", "Estados Unidos", "Venezuela", "Colombia", "Japón", "Corea del Norte", "Russia", "India")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, datos)
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         spinner.adapter = adapter
 
-        spinner.onItemSelectedListener = object : OnItemSelectedListener {
+        /*spinner.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val itemSelected = datos[position]
 
@@ -50,9 +52,9 @@ class SelectionComponentActivity : AppCompatActivity() {
                 Toast.makeText(this@SelectionComponentActivity, "Nada seleccionado", Toast.LENGTH_SHORT).show()
             }
 
-        }
+        }*/
 
-        btnSend.setOnClickListener {
+        /*btnSend.setOnClickListener {
             val cbStatus = cbCreditCard.isChecked
             val selectedRbSex = when(rgSex.checkedRadioButtonId){
                 R.id.rbMan -> "H"
@@ -61,6 +63,11 @@ class SelectionComponentActivity : AppCompatActivity() {
             }
 
             Toast.makeText(this, "value = $selectedRbSex", Toast.LENGTH_SHORT).show()
+        }*/
+
+        btnRecycler.setOnClickListener {
+            val intent = Intent(this, RecyclerActivity::class.java)
+            startActivity(intent)
         }
 
     }
