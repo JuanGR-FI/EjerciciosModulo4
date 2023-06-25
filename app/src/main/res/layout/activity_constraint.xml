@@ -139,6 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btnElementosGraficos"
         app:layout_constraintVertical_chainStyle="packed"
+        android:backgroundTint="@android:color/holo_purple"
         android:text="Ingresar"
         />
 

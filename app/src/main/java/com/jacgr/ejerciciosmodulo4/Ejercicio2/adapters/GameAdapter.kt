@@ -3,6 +3,7 @@ package com.jacgr.ejerciciosmodulo4.Ejercicio2.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.jacgr.ejerciciosmodulo4.Ejercicio2.componentesgraficos.PersonViewHolder
 import com.jacgr.ejerciciosmodulo4.Ejercicio2.models.Game
@@ -23,8 +24,14 @@ class GameAdapter(private var list: List<Game>) : RecyclerView.Adapter<GameViewH
 }
 
 class GameViewHolder(view: View): RecyclerView.ViewHolder(view) {
-    fun render(game: Game) {
 
+    val tvName = view.findViewById<TextView>(R.id.tvGameName)
+    val tvPrice = view.findViewById<TextView>(R.id.tvGamePrice)
+    val tvCategory = view.findViewById<TextView>(R.id.tvGameCategory)
+    fun render(game: Game) {
+        tvName.text = game.name
+        tvPrice.text = "$" + game.price.toString()
+        tvCategory.text = game.category
     }
 
 }
