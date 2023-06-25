@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.jacgr.ejerciciosmodulo4.Ejercicio2.models.Person
 import com.jacgr.ejerciciosmodulo4.R
 
 class RecyclerActivity : AppCompatActivity() {

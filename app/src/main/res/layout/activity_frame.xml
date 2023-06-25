@@ -7,12 +7,68 @@
     tools:context=".Ejercicio2.componentesgraficos.FrameActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="Frame Layout"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:gravity="center"
+        android:background="@android:color/holo_orange_light"
+        android:text="TOP LEFT"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:gravity="center"
+        android:background="@android:color/holo_red_light"
+        android:text="TOP RIGHT"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:background="@android:color/holo_green_light"
+        android:text="CENTER"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:gravity="center"
         android:background="@android:color/holo_blue_light"
-        android:text="Hola Mundo!"
+        android:text="BOTTOM LEFT"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:gravity="center"
+        android:background="@android:color/holo_purple"
+        android:text="BOTTOM RIGHT"
+        />
+
+    <Button
+        android:id="@+id/btnLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Linear Layout"
         />
 
 </FrameLayout>

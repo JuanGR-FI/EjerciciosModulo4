@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.jacgr.ejerciciosmodulo4.Ejercicio2.models.Person
 import com.jacgr.ejerciciosmodulo4.R
 
 class PersonAdapter(private var list: List<Person>) : RecyclerView.Adapter<PersonViewHolder>() {

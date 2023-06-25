@@ -27,7 +27,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.60" />
+        app:layout_constraintGuide_percent="0.80" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ivLogin"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="30dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="Constraint Layout"
+        />
+
+    <ImageView
+        android:id="@+id/ivLogin"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintBottom_toTopOf="@id/etCorreo"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/login_logo"
+        />
 
     <EditText
         android:id="@+id/etCorreo"
@@ -35,11 +62,34 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/glStart"
         app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/etPassword"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/ivLogin"
+        app:layout_constraintBottom_toTopOf="@+id/etNombre"
+        android:inputType="textEmailAddress"
         android:hint="Correo"
+        />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/etCorreo"
+        app:layout_constraintBottom_toTopOf="@+id/etEdad"
+        android:inputType="text"
+        android:hint="Nombre"
+        />
+
+    <EditText
+        android:id="@+id/etEdad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/etNombre"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        android:inputType="number"
+        android:hint="Edad"
         />
 
     <EditText
@@ -48,11 +98,23 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/glStart"
         app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        app:layout_constraintTop_toBottomOf="@+id/etCorreo"
-        app:layout_constraintBottom_toTopOf="@+id/tvRegister"
-        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/etEdad"
+        app:layout_constraintBottom_toTopOf="@+id/ibFacebook"
         android:inputType="textPassword"
         android:hint="Password"
+        />
+
+    <ImageButton
+        android:id="@+id/ibFacebook"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintBottom_toTopOf="@id/tvRegister"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/facebook_icon"
         />
 
     <TextView
@@ -61,9 +123,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/glStart"
         app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/ibFacebook"
         app:layout_constraintBottom_toTopOf="@+id/glPercent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:text="¿Ya estas registrado?"
         />
@@ -75,17 +137,21 @@
         app:layout_constraintTop_toTopOf="@+id/glPercent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnElementosGraficos"
+        app:layout_constraintVertical_chainStyle="packed"
         android:text="Ingresar"
         />
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <Button
+        android:id="@+id/btnElementosGraficos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/btnSend"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        android:layout_marginTop="10dp"
-        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@android:color/black"
+        android:text="Elementos Gráficos"
         />
 
 

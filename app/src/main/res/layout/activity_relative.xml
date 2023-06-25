@@ -7,30 +7,79 @@
     tools:context=".Ejercicio2.componentesgraficos.RelativeActivity">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
         android:gravity="center_horizontal"
         android:paddingVertical="10dp"
-        android:background="@android:color/holo_blue_dark"
-        android:textColor="@android:color/white"
         android:text="Ingresa tus datos"
-        />
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginVertical="10dp"
+        android:gravity="center_horizontal"
+        android:text="Relative Layout"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etCorreo"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:hint="Correo"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle2"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
+        android:hint="Correo" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/etCorreo"
         android:layout_centerHorizontal="true"
-        android:text="Entrar"
-        />
+        android:layout_marginTop="30dp"
+        android:hint="Password" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="Edad" />
+
+    <EditText
+        android:id="@+id/etSex"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etAge"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="Sexo" />
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etSex"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Entrar" />
+
+    <Button
+        android:id="@+id/btnConstraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnEnter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Constraint Layout" />
 
 </RelativeLayout>
