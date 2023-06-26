@@ -13,11 +13,23 @@
         android:theme="@style/Theme.EjerciciosModulo4"
         tools:targetApi="31">
         <activity
+            android:name=".tarearegistro.InfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tarearegistro.RegisterActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Ejercicio2.componentesgraficos.RecyclerActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Ejercicio2.componentesgraficos.SelectionComponentActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Ejercicio2.componentesgraficos.ConstraintActivity"
             android:exported="true" />
@@ -29,13 +41,7 @@
             android:exported="true" />
         <activity
             android:name=".Ejercicio2.componentesgraficos.FrameActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".Ejercicio1.SecondActivity"
             android:exported="false" />
