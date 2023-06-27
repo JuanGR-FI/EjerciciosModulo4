@@ -44,6 +44,7 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/etRegisterName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre"
@@ -58,6 +59,7 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/etRegisterLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Apellido"
@@ -72,6 +74,7 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/etRegisterEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="ejemplo@dominio.com"
@@ -86,23 +89,28 @@
             android:textStyle="bold" />
 
         <RadioGroup
+            android:id="@+id/rgRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/rbRegMan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="Hombre"
                 app:buttonTint="#560bad" />
 
             <RadioButton
+                android:id="@+id/rbRegWoman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mujer"
                 app:buttonTint="#560bad" />
 
             <RadioButton
+                android:id="@+id/rbRegOther"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Otro"
@@ -119,17 +127,20 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/etRegisterPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="***********"
             android:inputType="textPassword" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/gradient_button_backgd"
+            android:foreground="?attr/selectableItemBackground"
             android:text="Registrar"
             android:textColor="@color/white"
             android:textSize="20sp"
