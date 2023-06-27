@@ -80,7 +80,13 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         if(flag){
-            val intent = Intent(this, InfoActivity::class.java)
+            val intent = Intent(this, InfoActivity::class.java).apply {
+                putExtra("EXTRA_NAME", name)
+                putExtra("EXTRA_LAST_NAME", lastName)
+                putExtra("EXTRA_EMAIL", email)
+                putExtra("EXTRA_GENDER", gender)
+                putExtra("EXTRA_PASSWORD", password)
+            }
             startActivity(intent)
         }
 
