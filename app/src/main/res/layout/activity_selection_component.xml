@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="¿Cuentas con tarjeta de crédito?"
+        android:text="@string/label_has_credit_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etLastName" />
 
@@ -89,7 +89,7 @@
             android:id="@+id/rbMan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hombre" />
+            android:text="@string/label_gender_male" />
 
         <RadioButton
             android:id="@+id/rbWoman"

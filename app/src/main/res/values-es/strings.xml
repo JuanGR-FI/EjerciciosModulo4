@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EjerciciosModulo4</string>
+    <!--    activity selection component-->
+    <string name="label_has_credit_card">¿Cuentas con tarjeta de credito?</string>
+    <string name="label_gender_male">Hombre</string>
+    <string name="label_title_fragment">Ejemplo de fragment</string>
+</resources>

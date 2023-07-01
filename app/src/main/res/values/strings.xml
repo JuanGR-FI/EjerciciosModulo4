@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">EjerciciosModulo4</string>
+    <!--    activity selection component-->
+    <string name="label_has_credit_card">¿Do you have credit card?</string>
+    <string name="label_gender_male">Man</string>
+    <string name="label_title_fragment">Ejemplo de fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

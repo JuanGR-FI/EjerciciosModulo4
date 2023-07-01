@@ -5,69 +5,76 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/ivGame"
-        android:layout_width="100dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="16dp"
-        android:src="@drawable/ic_people"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvGameName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:text="Name"
-        style="@style/RedEditText"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/tvGamePrice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ivGame"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:fontFamily="@font/bernier_shade_regular"
-        />
-
-    <TextView
-        android:id="@+id/tvGamePrice"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="5dp"
-        android:text="$1,600.00"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@id/tvGameCategory"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ivGame"
-        app:layout_constraintTop_toBottomOf="@id/tvGameName"
-        android:fontFamily="@font/bernier_shade_regular"
-        />
-
-    <TextView
-        android:id="@+id/tvGameCategory"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="5dp"
-        android:text="Acción"
-        android:textColor="@android:color/holo_purple"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toTopOf="@id/delimiter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ivGame"
-        app:layout_constraintTop_toBottomOf="@id/tvGamePrice"
-        android:fontFamily="@font/bernier_shade_regular"
-        />
-
-    <View
-        android:id="@+id/delimiter"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="0.2dp"
-        android:layout_marginTop="1dp"
-        android:background="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/ivGame" />
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivGame"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/img_android"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvGameName"
+                style="@style/RedEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="@font/bernier_shade_regular"
+                android:text="Name"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tvGamePrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivGame"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tvGamePrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/bernier_shade_regular"
+                android:text="$1,600.00"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toTopOf="@id/tvGameCategory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivGame"
+                app:layout_constraintTop_toBottomOf="@id/tvGameName" />
+
+            <TextView
+                android:id="@+id/tvGameCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/bernier_shade_regular"
+                android:text="Acción"
+                android:textColor="@android:color/holo_purple"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivGame"
+                app:layout_constraintTop_toBottomOf="@id/tvGamePrice"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

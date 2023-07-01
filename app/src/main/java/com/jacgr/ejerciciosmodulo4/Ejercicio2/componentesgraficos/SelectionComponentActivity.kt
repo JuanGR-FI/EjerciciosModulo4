@@ -7,16 +7,22 @@ import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
 import com.jacgr.ejerciciosmodulo4.R
+import com.jacgr.ejerciciosmodulo4.databinding.ActivitySelectionComponentBinding
 
 class SelectionComponentActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySelectionComponentBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_selection_component)
+        binding = ActivitySelectionComponentBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val cbCreditCard = findViewById<CheckBox>(R.id.cbCreditCard)
-        val btnSend = findViewById<ImageButton>(R.id.btnSend)
-        val rgSex = findViewById<RadioGroup>(R.id.rgSex)
-        val btnRecycler = findViewById<Button>(R.id.btnRecyclerView)
+
+
+//        val cbCreditCard = findViewById<CheckBox>(R.id.cbCreditCard)
+//        val btnSend = findViewById<ImageButton>(R.id.btnSend)
+//        val rgSex = findViewById<RadioGroup>(R.id.rgSex)
+        //val btnRecycler = findViewById<Button>(R.id.btnRecyclerView)
 
         /*cbCreditCard.setOnCheckedChangeListener { _, isChecked ->
             Toast.makeText(this, "isChecked = $isChecked", Toast.LENGTH_SHORT).show()
@@ -33,13 +39,13 @@ class SelectionComponentActivity : AppCompatActivity() {
 
         // SPINNER
 
-        val spinner = findViewById<Spinner>(R.id.spinner)
+        //val spinner = findViewById<Spinner>(R.id.spinner)
         val datos = arrayListOf("México", "España", "Dinamarca", "Estados Unidos", "Venezuela", "Colombia", "Japón", "Corea del Norte", "Russia", "India")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, datos)
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        spinner.adapter = adapter
+        binding.spinner.adapter = adapter
 
         /*spinner.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -65,7 +71,7 @@ class SelectionComponentActivity : AppCompatActivity() {
             Toast.makeText(this, "value = $selectedRbSex", Toast.LENGTH_SHORT).show()
         }*/
 
-        btnRecycler.setOnClickListener {
+        binding.btnRecyclerView.setOnClickListener {
             val intent = Intent(this, RecyclerActivity::class.java)
             startActivity(intent)
         }
