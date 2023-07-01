@@ -2,6 +2,7 @@ package com.jacgr.ejerciciosmodulo4.Ejercicio2.componentesgraficos
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jacgr.ejerciciosmodulo4.Ejercicio2.adapters.GameAdapter
@@ -44,6 +45,10 @@ class RecyclerActivity : AppCompatActivity() {
             Game("Dead Island 2", 1480.99f, "Survival Horror"),
             Game("God of War Ragnarok", 960.00f, "Acción")
         ))
+
+        gameAdapter.onItemSelected = {game ->
+            Toast.makeText(this, "${game.name}", Toast.LENGTH_SHORT).show()
+        }
 
         rvPeople.adapter = gameAdapter
         rvPeople.layoutManager = LinearLayoutManager(this)

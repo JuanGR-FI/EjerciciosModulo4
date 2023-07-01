@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -8,11 +9,10 @@
         android:id="@+id/ivGame"
         android:layout_width="100dp"
         android:layout_height="130dp"
-        android:src="@drawable/mushroom_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="16dp"
-        />
+        android:src="@drawable/ic_people"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvGameName"
@@ -20,13 +20,14 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:text="Name"
-        android:textSize="20dp"
+        style="@style/RedEditText"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvGamePrice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ivGame"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvGamePrice"
         app:layout_constraintVertical_chainStyle="packed"
+        android:fontFamily="@font/bernier_shade_regular"
         />
 
     <TextView
@@ -38,10 +39,11 @@
         android:text="$1,600.00"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/tvGameCategory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ivGame"
         app:layout_constraintTop_toBottomOf="@id/tvGameName"
-        app:layout_constraintBottom_toTopOf="@id/tvGameCategory"
+        android:fontFamily="@font/bernier_shade_regular"
         />
 
     <TextView
@@ -53,10 +55,11 @@
         android:text="Acción"
         android:textColor="@android:color/holo_purple"
         android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@id/delimiter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ivGame"
         app:layout_constraintTop_toBottomOf="@id/tvGamePrice"
-        app:layout_constraintBottom_toTopOf="@id/delimiter"
+        android:fontFamily="@font/bernier_shade_regular"
         />
 
     <View
