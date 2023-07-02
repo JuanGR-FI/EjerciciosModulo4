@@ -3,4 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#DF1506</color>
+
+    //LoginFragment
+    <color name="hint_text_color">#CED4DA</color>
+    <color name="light_purple">#C8B6FF</color>
+    <color name="light_blue">#BBD0FF</color>
 </resources>
