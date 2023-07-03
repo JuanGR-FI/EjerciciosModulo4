@@ -7,17 +7,8 @@
     android:background="@drawable/background_gradient"
     tools:context=".practicafinal.activities.LoggingInActivity">
 
-    <!--<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LoggingIn Activity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />-->
-
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fgContainerView"
+        android:id="@+id/fgLoginContainerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.jacgr.ejerciciosmodulo4.practicafinal.fragments.LoginFragment"

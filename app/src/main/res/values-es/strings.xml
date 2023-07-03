@@ -5,4 +5,25 @@
     <string name="label_has_credit_card">¿Cuentas con tarjeta de credito?</string>
     <string name="label_gender_male">Hombre</string>
     <string name="label_title_fragment">Ejemplo de fragment</string>
+    <string name="welcome">¡Bienvenido!</string>
+    <string name="email_hint">Correo</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="log_in_button_text">INICIAR SESIÓN</string>
+    <string name="don_t_have_an_account_yet">¿Aún no tienes cuenta?</string>
+    <string name="register_here">Regístrate aquí</string>
+    <string name="required_hint">*Requerido</string>
+    <string name="new_member">¡Nuevo Miembro!</string>
+    <string name="name_hint">Nombre</string>
+    <string name="last_name_hint">Apellido</string>
+    <string name="register_button_text">REGISTRAR</string>
+    <string name="welcome_to_my_app">Bienvenido a mi App</string>
+    <string name="name_text_view">Nombre: %s</string>
+    <string name="last_name_text_view">Apellido: %s</string>
+    <string name="email_text_view">Correo: %s</string>
+    <string name="password_text_view">Contraseña: %s</string>
+    <string name="invalid_email">Por favor ingresa un correo válido</string>
+    <string name="enter_email">Por favor ingresa un correo</string>
+    <string name="enter_password">Por favor ingresa una contraseña</string>
+    <string name="enter_name">Por favor ingresa un nombre</string>
+    <string name="enter_last_name">Por favor ingresa un apellido</string>
 </resources>
