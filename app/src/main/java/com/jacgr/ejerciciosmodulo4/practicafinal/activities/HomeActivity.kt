@@ -22,8 +22,6 @@ class HomeActivity : AppCompatActivity() {
         binding.tvEmail.text = getString(R.string.email_text_view, email)
         binding.tvPassword.text = getString(R.string.password_text_view, password)
 
-
-
         if(name != null && lastName != null){
             binding.tvName.visibility = View.VISIBLE
             binding.tvLastName.visibility = View.VISIBLE

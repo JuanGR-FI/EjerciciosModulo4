@@ -62,23 +62,17 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         val email = binding.etRegisterEmail.text.toString()
         val password = binding.etRegisterPassword.text.toString()
 
-        if(name.isNotEmpty()){
-            Toast.makeText(requireContext(), name, Toast.LENGTH_SHORT).show()
-        }else{
+        if(name.isEmpty()){
             binding.ilRegisterName.error = getString(R.string.enter_name)
             flag = false
         }
 
-        if(lastName.isNotEmpty()){
-            Toast.makeText(requireContext(), lastName, Toast.LENGTH_SHORT).show()
-        }else{
+        if(lastName.isEmpty()){
             binding.ilRegisterLastName.error = getString(R.string.enter_last_name)
             flag = false
         }
 
         if(email.isNotEmpty()){
-            Toast.makeText(requireContext(), email, Toast.LENGTH_SHORT).show()
-
             if(!PatternsCompat.EMAIL_ADDRESS.matcher(email).matches()){
                 binding.ilRegisterEmail.error = getString(R.string.invalid_email)
                 flag = false
@@ -89,16 +83,12 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
             flag = false
         }
 
-        if(password.isNotEmpty()){
-            Toast.makeText(requireContext(), password, Toast.LENGTH_SHORT).show()
-        }else{
+        if(password.isEmpty()){
             binding.ilRegisterPassword.error = getString(R.string.enter_password)
             flag = false
         }
 
         if(flag){
-            //Toast.makeText(requireContext(), "Formulario valido", Toast.LENGTH_SHORT).show()
-
             val homeIntent = Intent(requireContext(), HomeActivity::class.java).apply {
                 putExtra("EXTRA_NAME", name)
                 putExtra("EXTRA_LAST_NAME", lastName)

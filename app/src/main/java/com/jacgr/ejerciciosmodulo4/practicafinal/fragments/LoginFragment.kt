@@ -57,8 +57,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         val password = binding.etLoginPassword.text.toString()
 
         if(email.isNotEmpty()){
-            Toast.makeText(requireContext(), email, Toast.LENGTH_SHORT).show()
-
             if(!PatternsCompat.EMAIL_ADDRESS.matcher(email).matches()){
                 binding.ilLoginEmail.error = getString(R.string.invalid_email)
                 flag = false
@@ -69,16 +67,12 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             flag = false
         }
 
-        if(password.isNotEmpty()){
-            Toast.makeText(requireContext(), password, Toast.LENGTH_SHORT).show()
-        }else{
+        if(password.isEmpty()){
             binding.ilLoginPassword.error = getString(R.string.enter_password)
             flag = false
         }
 
         if(flag){
-            //Toast.makeText(requireContext(), "Formulario valido", Toast.LENGTH_SHORT).show()
-
             val homeIntent = Intent(requireContext(), HomeActivity::class.java).apply {
                 putExtra("EXTRA_EMAIL", email)
                 putExtra("EXTRA_PASSWORD", password)
